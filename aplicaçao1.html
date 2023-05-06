@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste css e javascript</title>
+    <link rel="stylesheet " href="aplicaçao1.css"
+</head>
+<body>
+   <header>
+    <h1>Calculo de salario</h1>
+    <p>aqui será feito um calculo utilizando o valor da sua hora trabalhado.</p>
+   </header>
+    <div>
+        
+        <form action="" method="get ">
+            <h3 id="alteracao1">  <b>Por favor ponha seus dados nos campos abaixo.</b></h3>
+            <input type="text" name="nome" placeholder="digite seu nome">
+            <br>
+            <input type="text" name="sobrenome" placeholder="digite seu sobrenome">
+            <br>
+            <input type="text" name="imail" placeholder="digite seu email">
+            <br>
+            <button>salvar</button>
+            <script>
+                var infor = button;
+            </script>
+
+    </form>
+    </div>
+   
+   <div class="funcion">
+   <script>
+
+    
+        // variaveis para manter salvo os dados
+        var quantashoras //salva as horas que trabalha
+        var valorporhora // salva o valor por hora
+        var inss    // a porcentagem de desconto
+        var valorTotal// resultado da multiplicaçao, dando o salario.
+        var salarioBruto// valor total do salario bruto
+        var salarioLiquido// valor total do salario liquido
+        var totalDesConto // saida do total de desconto
+
+
+        //entrada de dados
+        var quantashoras = parseFloat(window.prompt("informe a quantidade de horas trabalhadas (30 a 300)", "0"));
+        var valorporhora = parseFloat(window.prompt("informe o valor de sua hora trabalhada (4 a 50)", "00"));
+        var inss = parseFloat(window.prompt("informe o valor do desconto(1 a 8)", "00"));
+        // calculo
+        var salarioBruto = quantashoras * valorporhora;
+        var totalDesConto = (inss / 100) * salarioBruto;
+        var salarioLiquido = salarioBruto - totalDesConto;
+
+        //saida de dados 
+        document.write("<p><b>demonstrativo do salario liquido</b></p>");
+        document.write("<p> quantidade de horas trabalhadas(30 a 300)==> <b>" + quantashoras + "</b>");
+        if (quantashoras > 300) {
+            document.write("....(<b>valor invalido, maximo superado  </b>)");
+        }
+        if (quantashoras < 30) {
+            document.write("....(<b> valor invalido, minimo superado </b>)");
+        }
+        document.write("<p> valor de hora trabalhada (4 a 50)==> <b>" + valorporhora + "</b>");
+
+        if (valorporhora > 50) {
+            document.write("....(<b> valor ivalido, maximo superado </b>)");
+        }
+        if (valorporhora < 4) {
+            document.write("....(<b>valor invalido, minimo superado</b>)");
+        }
+        document.write("<p> percentual de desconto do inss ( 1 a 8)==> <b>" + inss + "</b>");
+
+
+        if (inss > 8) {
+            document.write("....( <b> valor invalido, maximo superado  </b>)");
+        }
+        if (inss < 1) {
+            document.write("....( <b> valor invalido, miinimo superado </b>)");
+        }
+        
+        document.write("<p> <b> salario bruto = </b>" + salarioBruto);
+        document.write("<p><b> total de desconto inss=</b>" + totalDesConto);
+        document.write("<p> <b> salario liquido = </b>" + salarioLiquido);
+        if (salarioLiquido > 6000) {
+            document.write("...( <b> valor acima da media </b> maior que 6.000)");
+        }
+        else {
+            if (salarioLiquido > 4000) {
+                document.write("...(<b>valor satisfatorio </b>)maior que 4.000)");
+            }
+            else {
+                if (salarioLiquido < 2000) {
+                    document.write("...(<b> valor  moderado</b> inferior a 2.000)");
+
+                }
+                else {
+                    document.write("...(<b> valor abaixo do minimo</b> inferior a 2.000)");
+                }
+            }
+        }
+
+
+    </script>
+</div>
+</body>
+</html>

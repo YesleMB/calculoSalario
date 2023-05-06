@@ -1,0 +1,42 @@
+body{
+    background-color: bisque;
+
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    background-color: rgb(249, 227, 200);
+    border-radius: 60%;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-size: 80px
+}
+p{
+    font-family: cambria;
+    font-style: italic;
+    color: blueviolet;
+    
+}
+div{
+    font-family: arial;
+    color:rgb(0, 0, 0);
+    border-block: solid;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    
+}
+#alteracao1{
+    
+    border: 30px 0px 30px 0px;   
+}
+.funcion{
+    display: flex;
+    text-align: center;
+    border: solid 3px;
+    flex-direction: column;
+}
